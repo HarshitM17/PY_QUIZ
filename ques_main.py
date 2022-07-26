@@ -1,4 +1,9 @@
 from calc import *
+import webbrowser
+
+Name = input("Enter your name:- ")
+Age = input("Enter your age")
+
 
 print("There are 10 questions in this quiz which are given below...")
 ques_a=int(input("Ques 1--> Multiply 4 and 5 ::"))
@@ -39,3 +44,39 @@ if ques_e=="86400":
 else:
     print("Wrong answer!!")
     print("Correct answer is {}".format(mul(24,mul(60,60))))
+ques_f=int(input("Give the answer of the following:-  sqrt(3249)+(19)^2: "))
+if ques_f==418:
+    print("Correct")
+    score+=1
+else:
+    num_a,num_b=map(int,input("Enter the numeber a and b to get correct output:").split())
+    print(root(3259)+square(19))
+ques_g=int(input("How many states are in India:- "))
+if ques_g==28:
+    print("Correct")
+    score+=1
+else:
+    print("The number of states in India are {}.".format(28))
+ques_h=int(input("How many union teritories are in India:-  "))
+if ques_h==8:
+    print("Correct")
+    score+=1
+else:
+    print("The number of union teritories in India are {}.".format(8))
+ques_i=input("What is the capital of Rajasthan:- ")
+if ques_i.upper()=="JAIPUR":
+    print("Correct")
+    score+=1
+else:
+    print("The capital of Rajasthan is {}.".format("Jaipur"))
+ques_j=input("What is the Capital of India:- ")
+if ques_j.upper()=="NEW DELHI":
+    print("Correct")
+    score+=1
+else:print("The Capital of India is {}.".format("New Delhi"))
+
+if 8<=score<=10:
+    print("Congragulations on your excellence Mr/Ms/Mrs {}.".format(Name))
+    webbrowser.open("https://drive.google.com/file/d/1XW3wumvguf82tPYVvkSe7YMH92wh8yKQ/view")
+else:
+    print("Better luck next time!")
